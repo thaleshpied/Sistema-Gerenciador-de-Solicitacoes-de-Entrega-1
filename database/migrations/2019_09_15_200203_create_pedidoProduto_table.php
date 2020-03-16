@@ -14,9 +14,9 @@ class CreatePedidoProdutoTable extends Migration {
 	{
 		Schema::create('pedidoProduto', function(Blueprint $table)
 		{
+			$table->integer('codigoPedidoProduto', true);
 			$table->integer('codigoPedido')->index('FK_PedidoProduto_1');
 			$table->integer('codigoProduto')->index('FK_PedidoProduto_2');
-			$table->integer('codigoProdutoTamanho')->index('FK_PedidoProduto_3')->nullable();
 			$table->integer('quantidade');
 		});
 	}

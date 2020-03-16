@@ -17,6 +17,7 @@ class CreateProdutoAdicionalTable extends Migration {
 			$table->integer('codigoProdutoAdicional', true);
 			$table->string('nome', 20);
 			$table->float('valorUnitario', 8, 2);
+			$table->boolean('ativo');
 			$table->integer('codigoProduto')->index('FK_ProdutoAdicional_1');
 		});
 	}

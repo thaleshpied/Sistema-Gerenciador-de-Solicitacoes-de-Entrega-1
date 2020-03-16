@@ -16,7 +16,6 @@ class AddForeignKeysToPedidoProdutoTable extends Migration {
 		{
 			$table->foreign('codigoPedido', 'FK_PedidoProduto_1')->references('codigoPedido')->on('pedido')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 			$table->foreign('codigoProduto', 'FK_PedidoProduto_2')->references('codigoProduto')->on('produto')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('codigoProdutoTamanho', 'FK_PedidoProduto_3')->references('codigoProdutoTamanho')->on('produtoTamanho')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
@@ -32,7 +31,6 @@ class AddForeignKeysToPedidoProdutoTable extends Migration {
 		{
 			$table->dropForeign('FK_PedidoProduto_1');
 			$table->dropForeign('FK_PedidoProduto_2');
-			$table->dropForeign('FK_PedidoProduto_3');
 		});
 	}
 
