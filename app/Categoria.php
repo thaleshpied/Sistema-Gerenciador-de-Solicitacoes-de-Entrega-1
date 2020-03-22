@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int $codigoCategoria
  * @property string $nome
+ * @property boolean $ativo
  * @property Produto[] $produtos
  */
 class Categoria extends Model
@@ -35,7 +36,7 @@ class Categoria extends Model
     /**
      * @var array
      */
-    protected $fillable = ['nome'];
+    protected $fillable = ['nome', 'ativo'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

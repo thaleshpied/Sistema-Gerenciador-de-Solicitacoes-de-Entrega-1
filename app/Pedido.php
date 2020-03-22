@@ -81,29 +81,4 @@ class Pedido extends Model
     {
         return $this->hasMany('App\PedidoProduto', 'codigoPedido', 'codigoPedido');
 	}
-	
-	public static function pedidoCliente(int $codigoPedido)
-	{
-		return DB::table('pedido')
-		->join('pedidoProduto', 'pedido.codigoPedido', '=', 'pedidoProduto.codigoPedido')
-		->join('produto', 'pedidoProduto.codigoProduto', '=', 'produto.codigoProduto')
-		->leftJoin('entrega', 'pedido.codigoPedido', '=', 'entrega.codigoPedido')
-		->leftJoin('endereco', 'entrega.codigoEndereco', '=', 'endereco.codigoEndereco')
-		->leftJoin('bairro', 'bairro.codigoBairro', '=', 'endereco.codigoBairro')
-		->leftJoin('cidade', 'cidade.codigoCidade', '=', 'bairro.codigoCidade')
-		->join('cliente', 'cliente.codigoCliente', '=', 'pedido.codigoCliente')
-		->select('cliente.codigoCliente',
-			'cliente.name as cliente',
-			'pedido.codigoPedido',
-			'pedidoProduto.codigoProduto',
-			'pedidoProduto.quantidade',
-			'produto.nome as produto',
-			'produto.valorUnitario',
-			'entrega.situacao',
-			'endereco.*',
-			'bairro.nome as bairro',
-			'cidade.nome as cidade')
-		->where('pedido.codigoPedido', '=', $codigoPedido)
-		->get();
-	}
 }

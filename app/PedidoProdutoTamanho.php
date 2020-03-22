@@ -5,15 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property int $codigoPedidoProduto
+ * @property int $codigoPedidoProdutoTamanho
  * @property int $codigoPedido
- * @property int $codigoProduto
+ * @property int $codigoProdutoTamanho
  * @property int $quantidade
- * @property Produto $produto
+ * @property ProdutoTamanho $produtoTamanho
  * @property Pedido $pedido
  * @property PedidoProdutoAdicional[] $pedidoProdutosAdicionais
  */
-class PedidoProduto extends Model
+class PedidoProdutoTamanho extends Model
 {
 	/**
      * Enable or disable timestamps for the model.
@@ -27,26 +27,26 @@ class PedidoProduto extends Model
      * 
      * @var string
      */
-    protected $table = 'pedidoProduto';
+    protected $table = 'pedidoProdutoTamanho';
 
     /**
      * The primary key for the model.
      * 
      * @var string
      */
-    protected $primaryKey = 'codigoPedidoProduto';
+    protected $primaryKey = 'codigoPedidoProdutoTamanho';
 
     /**
      * @var array
      */
-    protected $fillable = ['codigoPedido', 'codigoProduto', 'quantidade'];
+    protected $fillable = ['codigoPedido', 'codigoProdutoTamanho', 'quantidade'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function produto()
+    public function produtoTamanho()
     {
-        return $this->belongsTo('App\Produto', 'codigoProduto', 'codigoProduto');
+        return $this->belongsTo('App\ProdutoTamanho', 'codigoProdutoTamanho', 'codigoProdutoTamanho');
     }
 
     /**
@@ -62,6 +62,6 @@ class PedidoProduto extends Model
      */
     public function pedidoProdutoAdicionais()
     {
-        return $this->hasMany('App\PedidoProdutoAdicional', 'codigoPedidoProduto', 'codigoPedidoProduto');
+        return $this->hasMany('App\PedidoProdutoAdicional', 'codigoPedidoProdutoTamanho', 'codigoPedidoProdutoTamanho');
     }
 }

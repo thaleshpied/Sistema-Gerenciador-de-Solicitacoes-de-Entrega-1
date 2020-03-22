@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $codigoCliente
  * @property Cliente $cliente
  */
-class TelefoneCliente extends Model
+class ClienteTelefone extends Model
 {
 	/**
      * Enable or disable timestamps for the model.
@@ -23,12 +23,12 @@ class TelefoneCliente extends Model
      * 
      * @var string
      */
-    protected $table = 'telefoneCliente';
+    protected $table = 'clienteTelefone';
 
     /**
      * @var array
      */
-    protected $fillable = ['telefoneCliente', 'codigoCliente'];
+    protected $fillable = ['clienteTelefone', 'codigoCliente'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
