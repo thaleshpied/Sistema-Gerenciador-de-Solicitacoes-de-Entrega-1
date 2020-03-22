@@ -11,8 +11,32 @@
 |
 */
 
-Route::get('/', 'LojaController@index');
-
 Auth::routes();
 
-Route::get('/home', 'LojaController@index')->name('home');
+/*
+|--------------------------------------------------------------------------
+| Rotas da Loja
+|--------------------------------------------------------------------------
+*/
+
+Route::resource('/', 'LojaController');
+
+Route::post('/addCarrinho','LojaController@adicionarCarrinho');
+
+Route::post('/buscar','LojaController@buscarCategoria');
+
+Route::post('/pesquisar','LojaController@pesquisarProduto');
+
+Route::post('/rmvCarrinho','CarrinhoController@removerCarrinho');
+
+Route::resource('/carrinho', 'CarrinhoController');
+
+Route::resource('/cliente', 'ClienteController');
+
+Route::resource('/pedidos', 'PedidoController');
+
+Route::get('/finalizar_pedido', 'PedidoController@finalizarPedido');
+
+Route::post('/addPedidoEntrega','PedidoController@salvarPedidoEntrega');
+
+Route::post('/addPedidoRetirar','PedidoController@salvarPedidoRetirar');
