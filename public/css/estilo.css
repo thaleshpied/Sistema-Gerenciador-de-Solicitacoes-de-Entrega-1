@@ -1,0 +1,170 @@
+h1{
+    font-size: 20px;
+}
+.topo{
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: -34px;
+    border-bottom: 2px solid #0d0d0d!important;
+    z-index: 1000;
+    margin-left: -15px;
+    height: 60px;
+}
+.topo h1{
+    margin-top: 15px;
+}
+.navbar{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    border: none;
+    box-shadow: 0px 1px 0px 1px;
+}
+.cardcat{
+    width: 130px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.card {
+    display: inline;
+}
+.card-text {
+    margin-bottom: -40px;
+}
+.card img{
+    border-radius: 10px;
+    height: 180px;
+    width: 90%;
+}
+.card-img-top{
+    border-radius: 10px;
+    height: 80px;
+    box-shadow: 0 0 3px black;
+}
+.card-img-topo{
+    border-radius: 1px;
+    height: 90px;
+    box-shadow: 0 0 1px 2px black;
+}    
+.card-logo{
+    height: 59px;
+    position: relative;
+    left: 22px;
+}
+.nomecat{
+    margin-top: -20px;
+}
+#logo.ativo{
+    width: 93px
+    max-height: 310px;
+}
+.secao2{
+    margin-top: 10px;    
+}
+.secao3{
+    position: absolute;
+    margin-top: 285px;
+}
+.secao2 form {
+    width: 100%;
+    margin-top: 10px;
+}
+footer{
+    height: 48px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 0px 0 2px black;
+    bottom: 0;
+}
+footer i{
+    font-size: 25px;
+    margin-top: 5px;
+    color: black;
+}
+footer a h2{
+    margin-top: -4px;
+    font-size: 12px;
+    color: black;    
+}
+footer h3{
+    margin-top: -53px;
+    font-size: 13px;
+    margin-left: 43px;
+    color: #ff5c5c;
+}
+#maisopcoes{
+    width: 100%;
+    height: 800px;
+    background-color: transparent;
+    margin-top: -1000px;
+    z-index: 0;
+    position: absolute;  
+    display: inline;  
+    margin-left: 15px;  
+    transition: 0s; 
+}
+#maisopcoes.efeito{
+    width: 100%;
+    height: 800px;
+    background-color: #05030375;
+    margin-top: -200px;
+    z-index: 1;    
+    position: fixed;
+    display: inline;
+    margin-left: 15px;   
+    transition: 0s;
+}
+.btn-custom {
+    padding: 1px 15px 3px 2px;
+    border-radius: 50px;
+}
+
+.btn-icon {
+    padding: 8px;
+    background: #ffffff;
+}
+.btn-primary-product{
+    width: 100%;
+    background-color: #6c757d;
+    color: white;
+    font-size: 21px;
+    border: solid 1.5px black;
+}
+#search{
+    border: solid 1px black;
+    margin-top: 6px;
+}
+#search:focus{     
+    box-shadow: 0 0 0 0.2rem #5271ff;
+}
+#form{
+    background-color: #6c757d;
+    margin-top: -44px;    
+    z-index: 1;
+    position: fixed;    
+    transition: 1s;
+}
+#form.efeito{
+    background-color: #6c757d;
+    margin-top: 23px;
+    z-index: 1;
+    position: fixed;
+}
+#btnPesquisa1{
+    margin-top: 5px;
+    border: none;
+    font-size: 25px;
+}
+.buttonload {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 12px 16px;
+    font-size: 100px;
+    margin-left: calc(33%);
+    margin-top: 200px;
+}

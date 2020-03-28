@@ -17,17 +17,17 @@ class LojaController extends Controller
 
 		$dados['filtrado'] = NULL;
 
-		$dados['categorias'] = Categoria::all()->toArray();
+		$dados['categorias'] = Categoria::all();
 
 		$produtos = Produto::where('quantidadeEstoque', '>', 0)->get();
 
-		$codigosProdutos = $produtos->pluck('codigoProduto')->toArray();
+		$codigosProdutos = $produtos->pluck('codigoProduto');
 
-		$produtosTamanhos = ProdutoTamanho::whereIn('codigoProduto', $codigosProdutos)->get()->toArray();
+		$produtosTamanhos = ProdutoTamanho::whereIn('codigoProduto', $codigosProdutos)->get();
 
-		$produtosAdicionais = ProdutoAdicional::whereIn('codigoProduto', $codigosProdutos)->get()->toArray();
+		$produtosAdicionais = ProdutoAdicional::whereIn('codigoProduto', $codigosProdutos)->get();
 
-		$dados['produtos'] = $produtos->toArray();
+		$dados['produtos'] = $produtos;
 
 		$dados['produtosTamanhos'] = $produtosTamanhos;
 
