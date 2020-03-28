@@ -29,13 +29,13 @@ class LojaController extends Controller
 
 		$dados['produtos'] = $produtos->toArray();
 
-		$dados['produtosTamanhos'] = $produtosTamanhos->toArray();
+		$dados['produtosTamanhos'] = $produtosTamanhos;
 
-		$dados['produtosAdicionais'] = $produtosAdicionais->toArray();
+		$dados['produtosAdicionais'] = $produtosAdicionais;
 
-		print_r($produtos);
+		//print_r($produtos);
 
-		//return view('loja', $dados);
+		return view('loja', $dados);
 	}
 
 	public function buscarCategoria(Request $request){
